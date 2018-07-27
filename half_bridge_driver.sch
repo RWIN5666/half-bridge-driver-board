@@ -1,0 +1,253 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Half Bridge MOSFET Driver board Schematics"
+Date "2018-07-27"
+Rev "A"
+Comp "EA"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_FET:ZXGD3003E6 U1
+U 1 1 5B5B1A0B
+P 3650 3150
+F 0 "U1" H 3650 2672 50  0000 C CNN
+F 1 "ZXGD3003E6" H 3650 2763 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 3650 2650 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ZXGD3003E6.pdf" H 3300 3400 50  0001 C CNN
+	1    3650 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Driver_FET:ZXGD3003E6 U2
+U 1 1 5B5B1A63
+P 8050 3150
+F 0 "U2" H 8050 3628 50  0000 C CNN
+F 1 "ZXGD3003E6" H 8050 3537 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 8050 2650 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ZXGD3003E6.pdf" H 7700 3400 50  0001 C CNN
+	1    8050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B5B1C37
+P 5450 3150
+F 0 "C1" H 5565 3196 50  0000 L CNN
+F 1 "10µF" H 5565 3105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210" H 5488 3000 50  0001 C CNN
+F 3 "~" H 5450 3150 50  0001 C CNN
+	1    5450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5B5B1CBD
+P 6400 3150
+F 0 "C2" H 6515 3196 50  0000 L CNN
+F 1 "10µF" H 6515 3105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210" H 6438 3000 50  0001 C CNN
+F 3 "~" H 6400 3150 50  0001 C CNN
+	1    6400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5B5B1EBD
+P 6000 3150
+F 0 "D1" V 6046 3071 50  0000 R CNN
+F 1 "GB01SLT12-214" V 5600 3400 50  0000 R CNN
+F 2 "Diodes_SMD:D_SMB" H 6000 3150 50  0001 C CNN
+F 3 "~" H 6000 3150 50  0001 C CNN
+	1    6000 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5450 3300 5450 3450
+Wire Wire Line
+	5450 3000 5450 2850
+Wire Wire Line
+	6000 3300 6000 3450
+Wire Wire Line
+	6000 3450 5450 3450
+Wire Wire Line
+	6000 3000 6000 2850
+Wire Wire Line
+	7550 3050 7550 3250
+Wire Wire Line
+	8550 3050 8550 3250
+Wire Wire Line
+	3150 3050 3150 3250
+Wire Wire Line
+	3650 2850 5450 2850
+Wire Wire Line
+	3650 3450 5450 3450
+Connection ~ 5450 3450
+Wire Wire Line
+	4150 3250 4250 3250
+Wire Wire Line
+	7550 3250 7450 3250
+Connection ~ 7550 3250
+Wire Wire Line
+	3150 3250 2900 3250
+Connection ~ 3150 3250
+Connection ~ 8550 3250
+Text Label 8900 3250 0    50   ~ 0
+Low_Side_MOSFET_Gate
+Text Label 2900 3250 2    50   ~ 0
+High_Side_MOSFET_Gate
+Text Label 4450 3250 0    50   ~ 0
+High_Side_Input
+Text Label 7300 3250 2    50   ~ 0
+Low_Side_Input
+$Comp
+L power:GND #PWR02
+U 1 1 5B5B3A69
+P 8050 3600
+F 0 "#PWR02" H 8050 3350 50  0001 C CNN
+F 1 "GND" H 8055 3427 50  0000 C CNN
+F 2 "" H 8050 3600 50  0001 C CNN
+F 3 "" H 8050 3600 50  0001 C CNN
+	1    8050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3600 8050 3450
+Connection ~ 8050 3450
+$Comp
+L power:+15V #PWR01
+U 1 1 5B5B3C68
+P 7550 2850
+F 0 "#PWR01" H 7550 2700 50  0001 C CNN
+F 1 "+15V" H 7565 3023 50  0000 C CNN
+F 2 "" H 7550 2850 50  0001 C CNN
+F 3 "" H 7550 2850 50  0001 C CNN
+	1    7550 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7550 2850
+Wire Wire Line
+	7550 2850 8050 2850
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5B5B3CB2
+P 7250 2850
+F 0 "#FLG01" H 7250 2925 50  0001 C CNN
+F 1 "PWR_FLAG" H 7250 3024 50  0000 C CNN
+F 2 "" H 7250 2850 50  0001 C CNN
+F 3 "~" H 7250 2850 50  0001 C CNN
+	1    7250 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 2850
+Wire Wire Line
+	7250 2850 7550 2850
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5B5B3CD0
+P 8050 3600
+F 0 "#FLG02" H 8050 3675 50  0001 C CNN
+F 1 "PWR_FLAG" V 8050 3728 50  0000 L CNN
+F 2 "" H 8050 3600 50  0001 C CNN
+F 3 "~" H 8050 3600 50  0001 C CNN
+	1    8050 3600
+	0    1    1    0   
+$EndComp
+Connection ~ 8050 3600
+Text Label 4050 2850 0    50   ~ 0
+15V_High_Side
+Text Label 4050 3450 0    50   ~ 0
+GND_High_Side
+Text Label 9200 1250 1    50   ~ 0
+15V_High_Side
+Text Label 9700 1250 1    50   ~ 0
+GND_High_Side
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5B5B423C
+P 9200 1500
+F 0 "#FLG0101" H 9200 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9200 1673 50  0000 C CNN
+F 2 "" H 9200 1500 50  0001 C CNN
+F 3 "~" H 9200 1500 50  0001 C CNN
+	1    9200 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5B5B441C
+P 9700 1500
+F 0 "#FLG0102" H 9700 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9700 1673 50  0000 C CNN
+F 2 "" H 9700 1500 50  0001 C CNN
+F 3 "~" H 9700 1500 50  0001 C CNN
+	1    9700 1500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9200 1250 9200 1500
+Wire Wire Line
+	9700 1250 9700 1500
+Wire Wire Line
+	4150 3050 4250 3050
+Wire Wire Line
+	4250 3050 4250 3250
+Connection ~ 4250 3250
+Wire Wire Line
+	4250 3250 4400 3250
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5B5B5458
+P 4650 3050
+F 0 "J1" H 4623 2980 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4623 3071 50  0000 R CNN
+F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 4650 3050 50  0001 C CNN
+F 3 "~" H 4650 3050 50  0001 C CNN
+	1    4650 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5B5B54C0
+P 6950 3100
+F 0 "J2" H 7056 3278 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 7056 3187 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 6950 3100 50  0001 C CNN
+F 3 "~" H 6950 3100 50  0001 C CNN
+	1    6950 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3050 4400 3050
+Wire Wire Line
+	4400 3050 4400 3250
+Connection ~ 4400 3250
+Wire Wire Line
+	4400 3250 4450 3250
+Wire Wire Line
+	8550 3250 8900 3250
+Wire Wire Line
+	7150 3100 7450 3100
+Wire Wire Line
+	7450 3100 7450 3250
+Connection ~ 7450 3250
+Wire Wire Line
+	7450 3250 7300 3250
+Wire Wire Line
+	6000 2850 6400 2850
+Wire Wire Line
+	6400 3450 6400 3300
+Wire Wire Line
+	6400 3450 8050 3450
+Wire Wire Line
+	6400 3000 6400 2850
+Connection ~ 6400 2850
+Wire Wire Line
+	6400 2850 7250 2850
+$EndSCHEMATC
