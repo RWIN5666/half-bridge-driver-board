@@ -61,24 +61,18 @@ $EndComp
 $Comp
 L Device:D D1
 U 1 1 5B5B1EBD
-P 6000 3150
-F 0 "D1" V 6046 3071 50  0000 R CNN
-F 1 "GB01SLT12-214" V 5600 3400 50  0000 R CNN
-F 2 "Diodes_SMD:D_SMB" H 6000 3150 50  0001 C CNN
-F 3 "~" H 6000 3150 50  0001 C CNN
-	1    6000 3150
-	0    -1   -1   0   
+P 5950 2850
+F 0 "D1" V 5996 2771 50  0000 R CNN
+F 1 "GB01SLT12-214" V 5550 3100 50  0000 R CNN
+F 2 "Diodes_SMD:D_SMB" H 5950 2850 50  0001 C CNN
+F 3 "~" H 5950 2850 50  0001 C CNN
+	1    5950 2850
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5450 3300 5450 3450
 Wire Wire Line
 	5450 3000 5450 2850
-Wire Wire Line
-	6000 3300 6000 3450
-Wire Wire Line
-	6000 3450 5450 3450
-Wire Wire Line
-	6000 3000 6000 2850
 Wire Wire Line
 	7550 3050 7550 3250
 Wire Wire Line
@@ -233,14 +227,11 @@ Connection ~ 7450 3250
 Wire Wire Line
 	7450 3250 7300 3250
 Wire Wire Line
-	6000 2850 6400 2850
-Wire Wire Line
 	6400 3450 6400 3300
 Wire Wire Line
 	6400 3450 8050 3450
 Wire Wire Line
 	6400 3000 6400 2850
-Connection ~ 6400 2850
 Wire Wire Line
 	6400 2850 7250 2850
 Wire Wire Line
@@ -254,5 +245,10 @@ Wire Wire Line
 	3650 2850 5450 2850
 Wire Wire Line
 	3650 3450 5450 3450
-Connection ~ 5450 3450
+Wire Wire Line
+	6100 2850 6400 2850
+Connection ~ 6400 2850
+Wire Wire Line
+	5800 2850 5450 2850
+Connection ~ 5450 2850
 $EndSCHEMATC

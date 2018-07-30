@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:half_bridge_driver-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -22,7 +23,7 @@ F 1 "ZXGD3003E6" H 3650 2763 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 3650 2650 50  0001 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/ZXGD3003E6.pdf" H 3300 3400 50  0001 C CNN
 	1    3650 3150
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Driver_FET:ZXGD3003E6 U2
@@ -83,20 +84,12 @@ Wire Wire Line
 Wire Wire Line
 	8550 3050 8550 3250
 Wire Wire Line
-	3150 3050 3150 3250
-Wire Wire Line
-	3650 2850 5450 2850
-Wire Wire Line
-	3650 3450 5450 3450
-Connection ~ 5450 3450
-Wire Wire Line
 	4150 3250 4250 3250
 Wire Wire Line
 	7550 3250 7450 3250
 Connection ~ 7550 3250
 Wire Wire Line
-	3150 3250 2900 3250
-Connection ~ 3150 3250
+	3150 3250 3050 3250
 Connection ~ 8550 3250
 Text Label 8900 3250 0    50   ~ 0
 Low_Side_MOSFET_Gate
@@ -250,4 +243,16 @@ Wire Wire Line
 Connection ~ 6400 2850
 Wire Wire Line
 	6400 2850 7250 2850
+Wire Wire Line
+	3150 3050 3050 3050
+Wire Wire Line
+	3050 3050 3050 3250
+Connection ~ 3050 3250
+Wire Wire Line
+	3050 3250 2900 3250
+Wire Wire Line
+	3650 2850 5450 2850
+Wire Wire Line
+	3650 3450 5450 3450
+Connection ~ 5450 3450
 $EndSCHEMATC
