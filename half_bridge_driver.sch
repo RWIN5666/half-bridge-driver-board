@@ -251,4 +251,30 @@ Connection ~ 6400 2850
 Wire Wire Line
 	5800 2850 5450 2850
 Connection ~ 5450 2850
+$Comp
+L Connector:Conn_01x01_Male J4
+U 1 1 5B647B4C
+P 9100 3050
+F 0 "J4" H 9073 2980 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 9073 3071 50  0000 R CNN
+F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 9100 3050 50  0001 C CNN
+F 3 "~" H 9100 3050 50  0001 C CNN
+	1    9100 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8900 3050 8900 3250
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5B648241
+P 2700 3050
+F 0 "J3" H 2673 2980 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2673 3071 50  0000 R CNN
+F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 2700 3050 50  0001 C CNN
+F 3 "~" H 2700 3050 50  0001 C CNN
+	1    2700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3050 2900 3250
 $EndSCHEMATC
